@@ -26,7 +26,7 @@ class HexTable():
 				x += 1
 				
 	def visualization(self, raw: bool = 0):
-		print(f"{' '*len(str(len(self.hex)))}   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F{'' if not raw else f'''{' '*len(str(len(self.hex)))} 0123456789ABCDEF'''}")
+		print(f"{' '*len(str(len(self.hex)))}   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F{'' if not raw else '   0123456789ABCDEF'}")
 		print(f"{' '*len(str(len(self.hex)))} ┌{'─'*46}{'───┐' if not raw else f'''{'─'*3}┬{'─'*17}─┐'''}")
 		for ind, line in enumerate(self.hex):
 			print(f"{hex(ind).lstrip('0x').upper()}{'0'*(len(str(len(self.hex)))-len(hex(ind).lstrip('0x')))}", end=" │ ")
